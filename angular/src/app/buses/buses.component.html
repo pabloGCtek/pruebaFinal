@@ -1,0 +1,11 @@
+<p>Lista de Buses</p>
+
+<table *ngFor=" let b of listaBuses">
+    <tr>
+        <td><h3>Bus con matricula: {{b.matricula}}</h3></td>
+        <td><p>fabricado en {{b.a_fabricacion}}</p></td>
+        <td *ngFor=" let v of b.visitas">
+            <app-visita [visita]="v"></app-visita>>
+        </td>
+    </tr>
+</table>
